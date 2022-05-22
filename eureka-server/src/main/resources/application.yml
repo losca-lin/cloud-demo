@@ -1,0 +1,16 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    fetch-registry: false
+    register-with-eureka: false
+#开启饿汉加载服务一启动就进行加载 默认为懒加载 即访问了才加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: user-service
