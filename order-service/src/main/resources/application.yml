@@ -8,10 +8,20 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: order-service
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://106.14.184.129:8848/
+        cluster-name: HZ
+        namespace: 5456531c-3d39-47f9-b416-ddd1535a00e7
+        ephemeral: false #不是临时实例
+user-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:10086/eureka
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
