@@ -6,18 +6,18 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-  application:
-    name: order-service
-  cloud:
-    nacos:
-      discovery:
-        server-addr: http://106.14.184.129:8848/
-        cluster-name: HZ
-        namespace: 5456531c-3d39-47f9-b416-ddd1535a00e7
-        ephemeral: false #不是临时实例
-user-service:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
+#  application:
+#    name: order-service
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: http://106.14.184.129:8848/
+#        cluster-name: HZ
+#        namespace: 5456531c-3d39-47f9-b416-ddd1535a00e7
+#        ephemeral: false #不是临时实例
+#user-service:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则，优先同一个集群的
 #eureka:
 #  client:
 #    service-url:
