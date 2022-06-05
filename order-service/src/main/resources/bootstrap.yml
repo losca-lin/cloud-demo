@@ -8,4 +8,7 @@ spring:
       server-addr: 106.14.184.129:8848
       config:
         file-extension: yml
-
+    sentinel:
+      transport:
+        dashboard: localhost:8099
+      web-context-unify: false #关闭context整合
