@@ -37,3 +37,4 @@ spring:
 #            - AddRequestHeader=Truth, Itcast is freaking awesome! # 添加请求头
       default-filters: # 全局过滤项
         - AddRequestHeader=Truth, Itcast is freaking awesome!
+        - AddRequestHeader=origin, gateway
